@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int fact(int n){
+ 
+   if(n==0) // to stop at zero(condition given)
+   return 1; // return 1 because 0 fact is 1
+   else
+  if(n==1)   // to print " = " after the last value which is 1
+    {
+    printf("%d = ",n);
+    }
+    else
+    {
+      printf("%d*",n); //to print number with multi symbole
+    }
+  return n*fact(n-1);  // recursion 
+
+}
+
+int main(){
+  int value;
+
+  printf("Enter the value:");
+  scanf("%d",&value);
+   printf("%d",fact(value)); // calling the fact function and then printing the value retured from it.
+  return 0;
+}
